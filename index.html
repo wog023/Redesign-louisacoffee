@@ -7,25 +7,31 @@
 	
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 </head>
 <body>
 	<header>
-		<div>
+		<div class="logoRow">
 			<img src="https://www.louisacoffee.co/assets/img/logo-girl-image().png" alt="" id="logo">
 			<img src="https://www.louisacoffee.co/assets/img/logo-dark.png" alt="" id="title">
+			<i class="fa fa-bars toolbox" aria-hidden="true"></i>
 		</div>
-		<div class="lang"><p>ENG</p></div>
-		<div class="navbar">
-			<div class="navs"><p>首頁</p></div>
-			<div class="navs"><p>最新消息</p></div>
-			<div class="navs"><p>商品介紹</p></div>
-			<div class="navs"><p>咖啡世界</p></div>
-			<div class="navs"><p>關於我們</p></div>
-			<div class="navs"><p>聯絡我們</p></div>
-			<div class="navs"></div>
-		</div>
-		<i class="fa fa-bars toolbox" aria-hidden="true"></i>
+		<div class="menu">
+			<div class="lang"><p>ENG</p></div>
+			<i class="fa fa-times cross" aria-hidden="true"></i>
+			<div class="navbar">
+				<div class="navs"><p>首頁</p></div>
+				<div class="navs"><p>最新消息</p></div>
+				<div class="navs"><p>商品介紹</p></div>
+				<div class="navs"><p>咖啡世界</p></div>
+				<div class="navs"><p>關於我們</p></div>
+				<div class="navs"><p>聯絡我們</p></div>
+				<div class="navs"></div>
+			</div>
+			
+		</div>	
+		
 	</header>
 	<div class="container">
 		<div class="slide">
@@ -274,6 +280,26 @@
 		<p class="copyright">© Copyright 2020 - LOUISA COFFEE</p>
 	</footer>
 
+
+
+
+
+
+	<script>
+		$('.toolbox').click(function() {
+			$('.menu').slideDown(400)
+			$('.toolbox').hide()
+			$('body').css('overflow','hidden')
+		})
+		$('.cross').click(function(){
+			$('.menu').slideUp(400)
+			$('.toolbox').show()
+			$('body').css('overflow','unset')
+
+		})
+
+
+	</script>
 	
 </body>
 </html>
