@@ -97,7 +97,7 @@ header .toolbox{
 }
 .info2{
 	width: 100%;
-	
+	font-size: 0;
 }
 .info2 .infoBlock{
 	border: 1px #fff solid;
@@ -115,6 +115,7 @@ header .toolbox{
 	margin: auto;
 	z-index: 1;
 	letter-spacing: 5px;
+	font-size: 20px;
 }
 .info2 .infoBlock .filter{
 	position: absolute;
@@ -421,6 +422,18 @@ header .navbar .navs {
 
 /** Medium devices (tablets, 768px and up)**/
 @media (min-width: 768px) {
+	.info2 .infoBlock .infoBg {
+		height: 250px;
+	}
+	.info2 .infoBlock .filter {
+		height: 250px;
+	}
+	.info2 .infoBlock .infoTitle {
+		height: 250px;
+	}
+	.info2 .infoBlock h3 {
+		font-size: 25px;
+	}
 	.newsContent li p {
 		width: 70%;
 		margin-left: 5%;
@@ -441,6 +454,9 @@ header .navbar .navs {
 @media (min-width: 992px) {
 	header {
     	height: 70px;
+	}
+	header .logoRow{
+		height: 70px;
 	}
 	header #logo {
 	    height: 70px;
@@ -473,6 +489,37 @@ header .navbar .navs {
 		height: calc(100vh - 70px);
 		object-fit: cover;
 	}
+	.info2 {
+	    width: 85%;
+	    margin: auto;
+	}
+	.info2 .infoBlock{
+		width: calc(100% / 6);
+		display: inline-block;
+		position: relative;
+		transition: 0.6s linear;
+		transition-delay: 0.3s;
+
+	}
+
+
+	.info2 .infoBlock .infoBg {
+	    height: 500px;
+	}
+	.info2 .infoBlock .infoTitle{
+		height: 500px;
+	}
+	.info2 .infoBlock .infoTitle h3{
+		width: 60px;
+	}
+
+	.info2 .infoBlock .filter{
+		height: 500px;
+	}
+	
+
+
+
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/

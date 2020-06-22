@@ -47,42 +47,42 @@
 				</div>
 				
 				<div class="info2">
-					<div class="infoBlock">
+					<div class="infoBlock ib1" id="b1">
 						<a href="#">
 							<div class="infoTitle"><h3>最新消息</h3></div>
 							<div class="filter"></div>
 							<div class="infoBg bg1"></div>
 						</a>					
 					</div>
-					<div class="infoBlock">
+					<div class="infoBlock ib2">
 						<a href="#">
 							<div class="infoTitle"><h3>門市查詢</h3></div>
 							<div class="filter"></div>
 							<div class="infoBg bg2" ></div>
 						</a>					
 					</div>
-					<div class="infoBlock">
+					<div class="infoBlock ib3">
 						<a href="#">
 							<div class="infoTitle"><h3>輕食</h3></div>
 							<div class="filter"></div>
 							<div class="infoBg bg3" style=""></div>
 						</a>					
 					</div>
-					<div class="infoBlock">
+					<div class="infoBlock ib4">
 						<a href="#">
 							<div class="infoTitle"><h3>糕點</h3></div>
 							<div class="filter"></div>
 							<div class="infoBg bg4" ></div>
 						</a>					
 					</div>
-					<div class="infoBlock">
+					<div class="infoBlock ib5">
 						<a href="#">
 							<div class="infoTitle"><h3>商品專區</h3></div>
 							<div class="filter"></div>
 							<div class="infoBg bg5" ></div>
 						</a>					
 					</div>
-					<div class="infoBlock">
+					<div class="infoBlock ib6">
 						<a href="#">
 							<div class="infoTitle"><h3>聯絡我們</h3></div>
 							<div class="filter"></div>
@@ -295,8 +295,43 @@
 			$('.menu').slideUp(400)
 			$('.toolbox').show()
 			$('body').css('overflow','unset')
-
 		})
+
+
+		$(document).ready(function(){
+
+			function hhh(){
+				$('.ib1,.ib2,.ib3,.ib4,.ib5,.ib6').hover(function(){				
+					$('.infoBlock').css('width','10%').css('pointer-events','none');
+					$(this).css('width','50%').css('pointer-events','auto');
+				 }
+				,function(){
+					$('.infoBlock').css('width','calc(100% / 6)').css('pointer-events','auto')
+				})
+			}
+
+			var www = $(document).width()
+			if(www>990){
+					hhh()
+					
+			}else{
+				
+			}
+			$(window).resize(function(){
+				var www1 = $(document).width()
+				if(www1>990){
+					$('.infoBlock').css('width','calc(100% / 6)').css('pointer-events','auto')
+					hhh()
+					
+				}else{
+					$('.infoBlock').css('width','100%');
+					$('.ib1,.ib2,.ib3,.ib4,.ib5,.ib6').hover(
+						function(){$('.infoBlock').css('width','100%');}
+					)
+				}
+			})
+		})
+
 
 
 	</script>
