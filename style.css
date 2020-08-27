@@ -532,6 +532,9 @@ header .navbar .navs {
 		justify-content: space-evenly;
 		padding: 0 10%;
 	}
+	.category .scroll {
+	    overflow: -moz-hidden-unscrollable;
+	}
 	
 
 
